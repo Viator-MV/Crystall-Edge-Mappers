@@ -13,3 +13,18 @@
       minGroupSize: 1
       maxGroupSize: 1
 
+- type: cp14DemiplaneModifier
+  id: TomerRoom
+  name: cp14-modifier-tomer-room
+  levels:
+    min: 1
+    max: 10
+  generationWeight: 0.5
+  categories:
+    Reward: 0.5
+  layers:
+    - !type:CP14OreDunGen
+      entity: CP14DemiplaneTomerRoomSpawner
+      count: 1
+      minGroupSize: 1
+      maxGroupSize: 1

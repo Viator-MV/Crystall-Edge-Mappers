@@ -33,3 +33,34 @@
 #      Merkas: 10
 #  - type: SpawnPoint
 #    job_id: CP14GodMerkas
+
+- type: entity
+  parent: CP14BaseAltarPrimordial
+  id: CP14AltarPrimordialGodTomer
+  name: Mysterious, divine crystal
+  description: "Crystal formed in a demiplane that allows you to connect with a powerful entity."
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: _CP14/Structures/Specific/Thaumaturgy/energy_monolith_big.rsi
+    layers:
+    - state: dimension_core
+    drawdepth: Mobs
+    offset: 0,0.4
+  - type: CP14ReligionAltar
+    religion: Tomer
+  - type: CP14ReligionObserver
+    observation:
+      Tomer: 10
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 600
+        mask:
+        - MachineMask
+        layer:
+        - MidImpassable
+        - LowImpassable

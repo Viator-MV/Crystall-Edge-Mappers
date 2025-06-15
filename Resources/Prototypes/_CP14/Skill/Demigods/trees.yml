@@ -10,3 +10,10 @@
   desc: cp14-job-desc-god-lumera
   color: "#5632a8"
   parallax: Default
+
+- type: cp14SkillTree
+  id: GodTomer
+  name: cp14-job-name-god-tomer
+  desc: cp14-job-desc-god-tomer
+  color: "#d2d2d2"
+  parallax: Default

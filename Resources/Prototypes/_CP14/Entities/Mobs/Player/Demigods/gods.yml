@@ -125,3 +125,29 @@
         toggleAction: CP14ActionSpellGodLumeraWarp
   - type: CP14ReligionSpeaker
     speaker: CP14LumeraSpeakImpact
+
+- type: entity
+  parent: CP14MobGodBase
+  id: CP14MobGodTomer
+  name: Tomer
+  description: The goddess of the night and the night sky. Her stars hold so many secrets, which she protects with her wings.
+  components:
+  - type: Sprite
+    layers:
+    - state: lumera
+      shader: unshaded
+  - type: PointLight
+    color: "#ffffff"
+  - type: CP14SkillStorage
+    availableSkillTrees:
+    - GodLumera
+  - type: CP14ReligionEntity
+    religion: Tomer
+  - type: CP14ReligionVision
+    shaderColor:  0.29, 0.66, 0.87
+  - type: IntrinsicUI
+    uis:
+      enum.CP14ReligionEntityUiKey.Key:
+        toggleAction: CP14ActionSpellGodLumeraWarp
+  - type: CP14ReligionSpeaker
+    speaker: CP14LumeraSpeakImpact
