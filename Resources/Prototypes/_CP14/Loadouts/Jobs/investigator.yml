@@ -22,6 +22,7 @@
   loadouts:
   - CP14ClothingHeadGuardInvestigatorHelmet
   - CP14ClothingHeadGuardFedora
+  - CP14ClothingHeadGuardCap
   - CP14ClothingHeadGuardTriangular
 
 - type: loadout
