@@ -1,0 +1,63 @@
+- type: entity
+  id: CP14MobUndeadSkeletonDemiplaneLeader
+  parent: CP14MobUndeadSkeletonDemiplaneT2
+  name: skeleton
+  abstract: true
+  components:
+  - type: CP14NightVision
+  - type: NpcFactionMember
+    factions:
+    - CP14Monster
+  - type: CP14MagicEnergyContainer
+    magicAlert: CP14MagicEnergy
+    maxEnergy: 200
+    energy: 200
+    unsafeSupport: true
+  - type: CP14MagicEnergyDraw
+    energy: 1
+    delay: 5
+
+- type: entity
+  id: CP14MobUndeadSkeletonLeaderWizard
+  parent: CP14MobUndeadSkeletonDemiplaneT2
+  categories: [ ForkFiltered ]
+  suffix: Leader Wizard
+  components:
+  - type: Loadout
+    prototypes:
+    - CP14MobSkeletonLeaderWizard
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    damage:
+      types:
+        CP14ManaDepletion: -0.1
+  - type: CP14SkillStorage
+    skillPoints:
+      Memory:
+        max: 4
+    freeLearnedSkills:
+    #- SwordMastery
+    - HydrosophistryT1
+    - HydrosophistryT2
+    - MetamagicT1
+    - MetamagicT2
+    - PyrokineticT1
+    - CP14ActionSpellManaConsume
+    - CP14ActionSpellManaGift
+    - CP14ActionSpellManaConsumeElf
+    - CP14ActionSpellManaGiftElf
+    - CP14ActionSpellMagicSplitting
+
+- type: entity
+  id: CP14SpawnPointGhostDemiplaneSkeletonLeaderWizard
+  name: ghost role spawn point
+  description: A ghost role for a bloodthirsty and cunning skeleton.
+  suffix: skeleton Leader Wizard
+  categories: [ ForkFiltered ]
+  parent: CP14SpawnPointGhostDemiplaneSkeletonGreateSwordT2
+  components:
+  - type: GhostRoleMobSpawner
+    prototype: CP14MobUndeadSkeletonLeaderWizard
+  - type: GhostRole
+    name: cp14-ghost-role-information-name-skeleton

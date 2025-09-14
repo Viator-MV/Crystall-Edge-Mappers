@@ -19,7 +19,7 @@
 # TIER 1
 
 - type: startingGear
-  id: CP14MobSkeletonHalberdT1
+  id: CP14MobSkeletonGreateSwordT1
   equipment:
     outerClothing: CP14ClothingOuterClothingBoneArmor
     cloak: CP14ClothingCloakBone
@@ -41,6 +41,26 @@
     neck: CP14WeaponShieldWooden
 
 - type: startingGear
+  id: CP14MobSkeletonAxeT1
+  equipment:
+    outerClothing: CP14ClothingOuterClothingBoneArmor
+    cloak: CP14ClothingCloakBone
+    shirt: CP14ClothingShirtWarriorsGarbDress
+    pants: CP14ClothingPantsLoincloth
+    shoes: CP14ClothingShoesSandals
+    neck: CP14WeaponWarAxeIron
+
+- type: startingGear
+  id: CP14MobSkeletonHammerT1
+  equipment:
+    outerClothing: CP14ClothingOuterClothingBoneArmor
+    cloak: CP14ClothingCloakBone
+    shirt: CP14ClothingShirtWarriorsGarbDress
+    pants: CP14ClothingPantsLoincloth
+    shoes: CP14ClothingShoesSandals
+    neck: CP14WeaponWarHammerIron
+
+- type: startingGear
   id: CP14MobSkeletonDodgerT1
   equipment:
     mask: CP14ClothingMaskSinner
@@ -51,6 +71,7 @@
 - type: startingGear
   id: CP14MobSkeletonArcherT1
   equipment:
+    cloak: CP14ClothingCloakFurcapeBlue
     shirt: CP14ClothingShirtWarriorsGarbDress
     pants: CP14ClothingPantsLoincloth
     neck: CP14BowCombat
@@ -59,15 +80,16 @@
 # TIER 2
 
 - type: startingGear
-  id: CP14MobSkeletonHalberdT2
+  id: CP14MobSkeletonGreateSwordT2
   equipment:
     outerClothing: CP14ClothingOuterClothingBoneArmorUpgrade
     cloak: CP14ClothingCloakBone
     mask: CP14ClothingMaskSteelMask
     shirt: CP14ClothingShirtWarriorsGarbDress
-    pants: CP14ClothingPantsLoincloth
-    shoes: CP14ClothingShoesSandals
-    neck: CP14WeaponWarAxeIron
+    pants: CP14ClothingPantsBrown
+    shoes: CP14ClothingShoesLongLeatherBoots
+    belt: CP14WeaponDaggerIron
+    neck: CP14WeaponTwoHandedSwordIron
 
 - type: startingGear
   id: CP14MobSkeletonSwordT2
@@ -76,10 +98,34 @@
     cloak: CP14ClothingCloakBone
     mask: CP14ClothingMaskSteelMask
     shirt: CP14ClothingShirtWarriorsGarbDress
-    pants: CP14ClothingPantsLoincloth
-    shoes: CP14ClothingShoesSandals
+    pants: CP14ClothingPantsBrown
+    shoes: CP14ClothingShoesBlack
     belt: CP14WeaponSwordIron
-    neck: CP14WeaponShieldWooden
+    neck: CP14WeaponTowerShieldWooden
+
+- type: startingGear
+  id: CP14MobSkeletonAxeT2
+  equipment:
+    outerClothing: CP14ClothingOuterClothingBoneArmorUpgrade
+    cloak: CP14ClothingCloakBone
+    mask: CP14ClothingMaskSteelMask
+    shirt: CP14ClothingShirtWarriorsGarbDress
+    pants: CP14ClothingPantsJagermeisterTrousers
+    shoes: CP14ClothingShoesLongLeatherBoots
+    belt: CP14WeaponDaggerIron
+    neck: CP14WeaponWarAxeIron
+
+- type: startingGear
+  id: CP14MobSkeletonHammerT2
+  equipment:
+    outerClothing: CP14ClothingOuterClothingBoneArmorUpgrade
+    cloak: CP14ClothingCloakBone
+    mask: CP14ClothingMaskSteelMask
+    shirt: CP14ClothingShirtWarriorsGarbDress
+    pants: CP14ClothingPantsJagermeisterTrousers
+    shoes: CP14ClothingShoesBlack
+    belt: CP14WeaponDaggerIron
+    neck: CP14WeaponWarHammerIron
 
 - type: startingGear
   id: CP14MobSkeletonDodgerT2
@@ -94,6 +140,7 @@
 - type: startingGear
   id: CP14MobSkeletonArcherT2
   equipment:
+    cloak: CP14ClothingCloakFurcapeBlue
     head: CP14ClothingHeadHuntersHat
     mask: CP14ClothingMaskNeckerchief
     shirt: CP14ClothingShirtCottonBlack
@@ -103,23 +150,16 @@
     belt2: CP14WeaponSwordIron # change to Rapier when it will be added
     shoes: CP14ClothingShoesLongLeatherBoots
 
+# Leaders
+
 - type: startingGear
-  id: CP14MobSkeletonWizardT2
+  id: CP14MobSkeletonLeaderWizard
   equipment:
     outerClothing: CP14ClothingOuterClothingBoneArmor
     cloak: CP14ClothingCloakBoneMage
     head: CP14ClothingHeadTriangularHatGolden
     shirt: CP14ClothingShirtCottonBlack
-    pants: CP14ClothingPantsBrown
+    pants: CP14ClothingPantsGreen
     shoes: CP14ClothingShoesLongLeatherBoots
     belt: CP14WeaponSwordIron # change to Rapier when it will be added
-
-- type: startingGear
-  id: CP14MobSkeletonBardT2
-  equipment:
-    head: CP14ClothingHeadBeretMercenary
-    shirt: CP14ClothingShirtMercenary
-    pants: CP14ClothingPantsMercenaryTrousers
-    shoes: CP14ClothingShoesAristocraticBlack
-    neck: SkeletonGuitarInstrument
 

@@ -18,7 +18,7 @@
 - type: cp14LocationModifier
   id: EnemySkeletonT2
   levels:
-    min: 4
+    min: 3
     max: 10
   name: cp14-modifier-skeleton
   generationWeight: 2.0

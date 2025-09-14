@@ -12,7 +12,7 @@
 - type: entity
   parent: CP14ClothingCloakBone
   id: CP14ClothingCloakBoneMage
-  name: bone armor with cloak
+  name: bone long cloak
   description: The leader's cloak, for the leader's skeleton!
   components:
   - type: Sprite

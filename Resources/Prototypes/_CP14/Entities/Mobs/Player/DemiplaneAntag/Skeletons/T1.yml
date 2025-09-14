@@ -10,14 +10,14 @@
     - CP14Monster
 
 - type: entity
-  id: CP14MobUndeadSkeletonHalberdT1
+  id: CP14MobUndeadSkeletonGreateSwordT1
   parent: CP14MobUndeadSkeletonDemiplaneT1
   categories: [ ForkFiltered ]
-  suffix: Halebard T1
+  suffix: Greate Sword T1
   components:
   - type: Loadout
     prototypes:
-    - CP14MobSkeletonHalberdT1
+    - CP14MobSkeletonGreateSwordT1
   - type: CP14SkillStorage
     skillPoints:
       Memory:
@@ -27,7 +27,7 @@
   - type: CP14SpellStorage
     grantAccessToSelf: true
     spells:
-    - CP14ActionSpellKick
+    - CP14ActionSpellDash
 
 - type: entity
   id: CP14MobUndeadSkeletonSwordT1
@@ -44,6 +44,39 @@
         max: 0 
     #freeLearnedSkills:
     #- SwordMastery
+  - type: CP14SpellStorage
+    grantAccessToSelf: true
+    spells:
+    - CP14ActionSpellDash
+
+- type: entity
+  id: CP14MobUndeadSkeletonAxeT1
+  parent: CP14MobUndeadSkeletonDemiplaneT1
+  categories: [ ForkFiltered ]
+  suffix: Axe T1
+  components:
+  - type: Loadout
+    prototypes:
+    - CP14MobSkeletonAxeT1
+  - type: CP14SkillStorage
+    skillPoints:
+      Memory:
+        max: 0 
+    freeLearnedSkills:
+    #- SwordMastery
+    - AthleticT1
+    - AthleticT2
+    - CP14ActionSpellSecondWind
+
+- type: entity
+  id: CP14MobUndeadSkeletonHammerT1
+  parent: CP14MobUndeadSkeletonDemiplaneT1
+  categories: [ ForkFiltered ]
+  suffix: Hammer T1
+  components:
+  - type: Loadout
+    prototypes:
+    - CP14MobSkeletonHammerT1
   - type: CP14SpellStorage
     grantAccessToSelf: true
     spells:
@@ -67,7 +100,7 @@
     - AthleticT1
     - AthleticT2
     - CP14ActionSpellKick
-    - CP14ActionSpellSprint
+    - CP14ActionSpellDash
 
 - type: entity
   id: CP14MobUndeadSkeletonArcherT1
@@ -78,18 +111,14 @@
   - type: Loadout
     prototypes:
     - CP14MobSkeletonArcherT1
-  - type: CP14SpellStorage
-    grantAccessToSelf: true
-    spells:
-    - CP14ActionSpellSprint
   - type: CP14SkillStorage
     skillPoints:
       Memory:
-        max: 1
+        max: 0
     freeLearnedSkills:
-    - HydrosophistryT1
-    learnedSkills:
-    - CP14ActionSpellIceArrow
+    - AthleticT1
+    - CP14ActionSpellSprint
+    - CP14ActionToggleKeenEye
 
 - type: entity
   id: CP14SpawnPointGhostDemiplaneSkeletonT1
@@ -103,18 +132,17 @@
     table: !type:GroupSelector
       children:
       - !type:GroupSelector
-        weight: 15
+        weight: 40
         children:
         - id: SpawnPointGhostDemiplaneSkeletonArcherT1
-      - !type:GroupSelector
-        weight: 20
-        children:
-        - id: SpawnPointGhostDemiplaneSkeletonHalberdT1
+        - id: SpawnPointGhostDemiplaneSkeletonDodgerT1
       - !type:GroupSelector
         weight: 60
         children:
         - id: SpawnPointGhostDemiplaneSkeletonSwordT1
-        - id: SpawnPointGhostDemiplaneSkeletonDodgerT1
+        - id: SpawnPointGhostDemiplaneSkeletonGreateSwordT1
+        - id: SpawnPointGhostDemiplaneSkeletonAxeT1
+        - id: SpawnPointGhostDemiplaneSkeletonHammerT1
   - type: Sprite
     sprite: Markers/jobs.rsi
     layers:
@@ -123,10 +151,10 @@
         state: full
 
 - type: entity
-  id: SpawnPointGhostDemiplaneSkeletonHalberdT1
+  id: SpawnPointGhostDemiplaneSkeletonGreateSwordT1
   name: ghost role spawn point
   description: A ghost role for a bloodthirsty and cunning skeleton.
-  suffix: skeleton Halebard T1
+  suffix: skeleton Greate Sword  T1
   categories: [ ForkFiltered ]
   parent: MarkerBase
   components:
@@ -140,7 +168,7 @@
     raffle:
       settings: default
   - type: GhostRoleMobSpawner
-    prototype: CP14MobUndeadSkeletonHalberdT1
+    prototype: CP14MobSkeletonGreateSwordT1
   - type: Sprite
     sprite: Markers/jobs.rsi
     layers:
@@ -149,12 +177,38 @@
         state: full
 
 - type: entity
+  id: SpawnPointGhostDemiplaneSkeletonAxeT1
+  name: ghost role spawn point
+  description: A ghost role for a bloodthirsty and cunning skeleton.
+  suffix: skeleton Axe T1
+  categories: [ ForkFiltered ]
+  parent: SpawnPointGhostDemiplaneSkeletonGreateSwordT1
+  components:
+  - type: GhostRoleMobSpawner
+    prototype: CP14MobUndeadSkeletonAxeT1
+  - type: GhostRole
+    name: cp14-ghost-role-information-name-skeleton
+
+- type: entity
+  id: SpawnPointGhostDemiplaneSkeletonHammerT1
+  name: ghost role spawn point
+  description: A ghost role for a bloodthirsty and cunning skeleton.
+  suffix: skeleton Hammer T1
+  categories: [ ForkFiltered ]
+  parent: SpawnPointGhostDemiplaneSkeletonGreateSwordT1
+  components:
+  - type: GhostRoleMobSpawner
+    prototype: CP14MobUndeadSkeletonHammerT1
+  - type: GhostRole
+    name: cp14-ghost-role-information-name-skeleton
+
+- type: entity
   id: SpawnPointGhostDemiplaneSkeletonSwordT1
   name: ghost role spawn point
   description: A ghost role for a bloodthirsty and cunning skeleton.
   suffix: skeleton Sword T1
   categories: [ ForkFiltered ]
-  parent: SpawnPointGhostDemiplaneSkeletonHalberdT1
+  parent: SpawnPointGhostDemiplaneSkeletonGreateSwordT1
   components:
   - type: GhostRoleMobSpawner
     prototype: CP14MobUndeadSkeletonSwordT1
@@ -167,7 +221,7 @@
   description: A ghost role for a bloodthirsty and cunning skeleton.
   suffix: skeleton Dodger T1
   categories: [ ForkFiltered ]
-  parent: SpawnPointGhostDemiplaneSkeletonHalberdT1
+  parent: SpawnPointGhostDemiplaneSkeletonGreateSwordT1
   components:
   - type: GhostRoleMobSpawner
     prototype: CP14MobUndeadSkeletonDodgerT1
@@ -180,7 +234,7 @@
   description: A ghost role for a bloodthirsty and cunning skeleton.
   suffix: skeleton Archer T1
   categories: [ ForkFiltered ]
-  parent: SpawnPointGhostDemiplaneSkeletonHalberdT1
+  parent: SpawnPointGhostDemiplaneSkeletonGreateSwordT1
   components:
   - type: GhostRoleMobSpawner
     prototype: CP14MobUndeadSkeletonArcherT1
